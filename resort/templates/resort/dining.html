@@ -1,0 +1,730 @@
+{% extends "resort/index.html" %}
+{% load static %}
+{% block current_page %}Dining| {% endblock current_page %}
+{% block header_link %}
+
+{% endblock header_link %}
+
+{% block body %}
+{% block navigation %}
+{{ block.super }}
+{% endblock navigation %}
+
+
+<!-- ABOUT DINING -->
+<section class="dining-about-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="dining-about-image">
+                    <img src="{% static 'resort/img/about1.jpg' %}"
+                         alt="Koriema Resort dining experience">
+
+                    <div class="dining-image-caption">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <strong>Enjoy Every Moment</strong>
+                            <span>Food, comfort and hospitality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="slbl">WELCOME TO OUR RESTAURANT</span>
+
+                <h2 class="stitle">
+                    A Memorable <span>Dining Experience</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="dining-description">
+                    At Koriema Resort, dining is an opportunity to enjoy
+                    good food, relax and create memorable moments.
+                    We aim to provide a welcoming environment where
+                    guests can enjoy their meals and spend quality time.
+                </p>
+
+                <p class="dining-description">
+                    Whether you are visiting with family, friends or
+                    colleagues, our dining space offers an inviting
+                    setting for enjoyable dining experiences.
+                </p>
+
+                <a href="#food-menu" class="btn-red">
+                    Explore Our Menu
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORY -->
+      <section id="category">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What We Offer</span>
+               <h2 class="stitle">Browse by <span>Category</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">From sizzling burgers to exotic world cuisines - find your favourite in our menu</p>
+            </div>
+            <div class="row g-3 justify-content-center">
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+                  <div class="catcard active" data-filter="all">
+                     <img class="catimg" src=" {% static 'resort/img/category/1.jpg' %}" alt=""/>
+                     <div class="catnm">All Items</div>
+                     <div class="catct">99 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
+                  <div class="catcard" data-filter="burgers">
+                     <img class="catimg" src=" {% static 'resort/img/category/2.jpg' %}" alt=""/>
+                     <div class="catnm">Burgers</div>
+                     <div class="catct">24 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
+                  <div class="catcard" data-filter="pizza">
+                     <img class="catimg" src=" {% static 'resort/img/category/3.jpg' %}" alt=""/>
+                     <div class="catnm">Pizza</div>
+                     <div class="catct">18 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
+                  <div class="catcard" data-filter="chicken">
+                     <img class="catimg" src=" {% static 'resort/img/category/4.jpg' %}" alt=""/>
+                     <div class="catnm">Fried Chicken</div>
+                     <div class="catct">15 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
+                  <div class="catcard" data-filter="wraps">
+                     <img class="catimg" src=" {% static 'resort/img/category/5.jpg' %}" alt=""/>
+                     <div class="catnm">Wraps</div>
+                     <div class="catct">12 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src=" {% static 'resort/img/category/6.jpg' %}" alt=""/>
+                     <div class="catnm">Desserts</div>
+                     <div class="catct">20 items</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+  
+
+
+
+
+<!-- ============================================================
+         MENU � FIX 3 (filter works) + FIX 4 (plus opens popup)
+         ============================================================ -->
+      <section id="menu">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What's Cooking</span>
+               <h2 class="stitle">Our Delicious <span>Menu</span></h2>
+               <div class="sline"></div>
+            </div>
+            <!-- FIX 3 � filter buttons -->
+            <div class="text-center mb-4" data-aos="fade-up">
+               <button class="filtbtn active" data-f="all">All</button>
+               <button class="filtbtn" data-f="burgers">Burgers</button>
+               <button class="filtbtn" data-f="pizza">Pizza</button>
+               <button class="filtbtn" data-f="chicken">Chicken</button>
+               <button class="filtbtn" data-f="wraps">Wraps</button>
+               <button class="filtbtn" data-f="desserts">Desserts</button>
+               <button class="filtbtn" data-f="pasta">Pasta</button>
+            </div>
+            <div class="row g-4" id="mgrid">
+               <!-- CARD 1: Burgers -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="burgers" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/1.jpg"
+                     data-title="Classic Smash Burger"
+                     data-cat="Burgers"
+                     data-price="$14.99" data-old="$18.99"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="620" data-time="12"
+                     data-desc="Double smashed patty, cheddar cheese, caramelized onions, house pickles and our legendary special sauce. Made fresh to order on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Beef">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/1.jpg' %}" alt="Smash Burger"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Burgers</div>
+                        <div class="mtit">Classic Smash Burger</div>
+                        <div class="mdesc">Double smashed patty, cheddar, caramelized onions, pickles &amp; special sauce</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$14.99 <small>$18.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               
+               <!-- CARD 3: Chicken -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="chicken" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/3.jpg"
+                     data-title="Nashville Hot Chicken"
+                     data-cat="Chicken"
+                     data-price="$12.99" data-old="$16.99"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="710" data-time="15"
+                     data-desc="Extra-crispy fried chicken tossed in our signature fiery Nashville spice blend, served with honey drizzle and house pickles on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Crispy">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/3.jpg' %}" alt="Chicken"/>
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Chicken</div>
+                        <div class="mtit">Nashville Hot Chicken</div>
+                        <div class="mdesc">Crispy fried chicken in fiery Nashville spice blend with honey drizzle</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$12.99 <small>$16.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/2.jpg' %}" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pizza</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$19.99 <small>$24.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- CARD 4: Wraps -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="wraps" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/4.jpg"
+                     data-title="Loaded Fajita Wrap"
+                     data-cat="Wraps"
+                     data-price="$10.99" data-old=""
+                     data-rating="4.5" data-reviews="74"
+                     data-cal="520" data-time="10"
+                     data-desc="Grilled chicken strips, saut�ed bell peppers and onions, sour cream, fresh guacamole and salsa wrapped in a warm flour tortilla with melted cheddar."
+                     data-tags="Grilled,Fresh,Mexican">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/4.jpg' %}" alt="Wrap"/>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Wraps</div>
+                        <div class="mtit">Loaded Fajita Wrap</div>
+                        <div class="mdesc">Grilled chicken, peppers, sour cream &amp; guacamole in a warm tortilla</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$10.99</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/2.jpg' %}" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pizza</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$19.99 <small>$24.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- CARD 5: Desserts -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="desserts" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/5.jpg"
+                     data-title="Nutella Lava Cake"
+                     data-cat="Desserts"
+                     data-price="$8.99" data-old="$11.99"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="390" data-time="8"
+                     data-desc="Warm molten chocolate cake with a gooey Nutella center, served alongside Madagascar vanilla bean ice cream with salted caramel drizzle and fresh berries."
+                     data-tags="Sweet,New,Chocolate">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/5.jpg' %}" alt="Lava Cake"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Desserts</div>
+                        <div class="mtit">Nutella Lava Cake</div>
+                        <div class="mdesc">Molten chocolate cake with Nutella center, vanilla ice cream &amp; caramel</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$8.99 <small>$11.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/2.jpg' %}" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pizza</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$19.99 <small>$24.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/2.jpg' %}" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pizza</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$19.99 <small>$24.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- CARD 6: Pasta -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pasta" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/6.jpg"
+                     data-title="Truffle Mushroom Pasta"
+                     data-cat="Pasta"
+                     data-price="$16.99" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="560" data-time="20"
+                     data-desc="Al dente tagliatelle tossed with mixed wild mushrooms, freshly shaved black truffle, aged parmesan, fresh thyme and a touch of cream in garlic butter."
+                     data-tags="Vegetarian,Chef's Pick,Italian">
+                     <div class="mimg">
+                        <img src="{% static 'resort/img/menu/6.jpg' %}" alt="Pasta"/>
+                        <div class="mbdg hot">Chef's Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pasta</div>
+                        <div class="mtit">Truffle Mushroom Pasta</div>
+                        <div class="mdesc">Al dente tagliatelle, wild mushrooms, black truffle, parmesan &amp; thyme</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$16.99</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end #mgrid -->
+            <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Menu</a></div>
+         </div>
+      </section>
+	  
+	  
+      <!-- ============================================================
+         FIX 4 � MENU DETAIL POPUP MODAL
+         ============================================================ -->
+      <div id="menuPop">
+         <div class="mpbox">
+            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
+            <div class="mpbody">
+               <div id="mpCat"></div>
+               <div id="mpTitle"></div>
+               <div id="mpStars"></div>
+               <div id="mpDesc"></div>
+               <div id="mpPrice"></div>
+               <div class="mpmeta" id="mpMeta"></div>
+               <div class="mpqty">
+                  <button class="mpqbtn" id="mpMinus">-</button>
+                  <span class="mpqnum" id="mpQnum">1</span>
+                  <button class="mpqbtn" id="mpPlus">+</button>
+                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">portion</span>
+               </div>
+               <div class="mptags" id="mpTags"></div>
+               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+         </div>
+      </div>
+      
+         </div>
+      </section>
+	  
+<!-- FOOD CATEGORIES -->
+<section class="dining-categories-section" id="food-menu">
+    <div class="container">
+
+        <div class="dining-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">EXPLORE OUR MENU</span>
+            <h2 class="stitle">Food & <span>Dining Categories</span></h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto">
+                Discover a variety of dining choices prepared to make
+                your visit enjoyable.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CATEGORY 1 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="dining-category-card">
+                    <div class="dining-category-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Breakfast</h3>
+                    <p>
+                        Start your day with a satisfying breakfast
+                        in a relaxing atmosphere.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CATEGORY 2 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="dining-category-card">
+                    <div class="dining-category-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Main Meals</h3>
+                    <p>
+                        Enjoy a selection of meals suitable for
+                        lunch and dinner.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CATEGORY 3 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="dining-category-card">
+                    <div class="dining-category-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Local Cuisine</h3>
+                    <p>
+                        Enjoy familiar flavours and local food
+                        favourites.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CATEGORY 4 -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="dining-category-card">
+                    <div class="dining-category-icon">
+                        <i class="fas fa-glass-water"></i>
+                    </div>
+                    <h3>Drinks & Refreshments</h3>
+                    <p>
+                        Complement your meals with refreshing
+                        beverages.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FEATURED DISHES -->
+<!-- <section class="featured-dishes-section">
+    <div class="container">
+
+        <div class="dining-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">A TASTE TO REMEMBER</span>
+            <h2 class="stitle">Featured <span>Dishes</span></h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto">
+                Explore some of the dishes that can make your
+                dining experience special.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- DISH 1 -->
+            <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="{% static 'resort/img/dish-breakfast.jpg' %}"
+                             alt="Breakfast meal">
+                        <span class="dish-number">01</span>
+                    </div>
+
+                    <div class="dish-content">
+                        <span>BREAKFAST</span>
+                        <h3>Breakfast Selection</h3>
+                        <p>
+                            A satisfying start to your day with
+                            a selection of breakfast favourites.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- DISH 2 -->
+            <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="{% static 'resort/img/dish-local.jpg' %}"
+                             alt="Traditional local meal">
+                        <span class="dish-number">02</span>
+                    </div>
+
+                    <div class="dish-content">
+                        <span>LOCAL CUISINE</span>
+                        <h3>Traditional Cuisine</h3>
+                        <p>
+                            Enjoy familiar local flavours and
+                            satisfying traditional meals.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- DISH 3 -->
+            <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="{% static 'resort/img/dish-main.jpg' %}"
+                             alt="Main course meal">
+                        <span class="dish-number">03</span>
+                    </div>
+
+                    <div class="dish-content">
+                        <span>MAIN COURSE</span>
+                        <h3>Main Course Selection</h3>
+                        <p>
+                            Enjoy delicious meal options for
+                            lunch and dinner.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- DISH 4 -->
+            <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="{% static 'resort/img/dish-grilled.jpg' %}"
+                             alt="Grilled meal">
+                        <span class="dish-number">04</span>
+                    </div>
+
+                    <div class="dish-content">
+                        <span>GRILLED SPECIALS</span>
+                        <h3>Grilled Favourites</h3>
+                        <p>
+                            A selection of grilled dishes for
+                            guests who enjoy rich flavours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            </div> -->
+
+            <!-- DISH 6 -->
+            <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="{% static 'resort/img/dish-drinks.jpg' %}"
+                             alt="Refreshing beverages">
+                        <span class="dish-number">06</span>
+                    </div>
+
+                    <div class="dish-content">
+                        <span>REFRESHMENTS</span>
+                        <h3>Drinks & Beverages</h3>
+                        <p>
+                            Refresh yourself with a selection
+                            of beverages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>  -->
+
+
+<!-- DINING ATMOSPHERE -->
+<section class="dining-atmosphere-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="slbl">MORE THAN JUST A MEAL</span>
+
+                <h2 class="stitle">
+                    Enjoy the <span>Perfect Atmosphere</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="dining-description">
+                    Great dining is about more than what is on the
+                    plate. It is also about the atmosphere, the people
+                    and the moments shared around the table.
+                </p>
+
+                <p class="dining-description">
+                    At Koriema Resort, we welcome guests to enjoy
+                    a pleasant dining environment for everyday meals
+                    and special gatherings.
+                </p>
+
+                <a href="/contact/" class="btn-red">
+                    Plan Your Visit
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="dining-atmosphere-image">
+                    <img src="{% static 'resort/img/events.jpg' %}"
+                         alt="Restaurant dining atmosphere">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- DINING RESERVATION -->
+<section class="dining-reservation-section" id="reservation">
+    <div class="container">
+        <div class="dining-reservation-content text-center" data-aos="zoom-in">
+
+            <span class="slbl">WE LOOK FORWARD TO WELCOMING YOU</span>
+
+            <h2>Make Every Meal a Special Moment</h2>
+
+            <p>
+                Planning a meal, family gathering or special occasion?
+                Contact us to make an enquiry about our dining services.
+            </p>
+
+            <a href="/contact/" class="btn-red">
+                <i class="fas fa-calendar-check me-2"></i>
+                Make an Enquiry
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+{% block footer %}
+{{ block.super }}
+{% endblock footer %}
+{% endblock body %}

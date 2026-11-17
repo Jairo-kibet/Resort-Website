@@ -1,0 +1,402 @@
+{% extends "resort/index.html" %}
+{% load static %}
+{% block current_page %}Meetings & Events| {% endblock current_page %}
+{% block header_link %}
+
+{% endblock header_link %}
+
+{% block body %}
+{% block navigation %}
+{{ block.super }}
+{% endblock navigation %}
+
+<!-- ABOUT CONFERENCE FACILITIES -->
+<section class="conference-about-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="conference-about-image">
+                    <img src="{% static 'resort/img/meetings/r1.jpg' %}"
+                         alt="Conference facilities at Koriema Resort">
+
+                    <div class="conference-image-caption">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Professional Gatherings</strong>
+                            <span>A welcoming place to connect</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="slbl">MEETINGS & CORPORATE EVENTS</span>
+
+                <h2 class="stitle">
+                    The Right Environment for <span>Great Ideas</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="conference-description">
+                    At Koriema Resort, we understand the importance of
+                    a suitable environment for meetings, discussions
+                    and professional gatherings.
+                </p>
+
+                <p class="conference-description">
+                    Whether you are organising a business meeting,
+                    staff training, workshop, seminar or corporate
+                    gathering, our conference offering is designed
+                    to support a productive and welcoming experience.
+                </p>
+
+                <a href="#conference-rooms" class="btn-red">
+                    Explore Conference Spaces
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONFERENCE SPACES -->
+<section class="conference-rooms-section" id="conference-rooms">
+    <div class="container">
+
+        <div class="conference-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">SPACES FOR EVERY OCCASION</span>
+
+            <h2 class="stitle">
+                Our <span>Conference Spaces</span>
+            </h2>
+
+            <div class="sline mx-auto"></div>
+
+            <p class="sdesc mx-auto">
+                Explore meeting and conference space options for
+                different professional and organisational needs.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- SPACE 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="conference-room-card">
+
+                    <div class="conference-room-image">
+                        <img src="{% static 'resort/img/meetings/r1.jpg' %}"
+                             alt="Boardroom meeting setup">
+
+                        <span class="conference-room-tag">MEETINGS</span>
+                    </div>
+
+                    <div class="conference-room-content">
+                        <span class="conference-room-subtitle">PROFESSIONAL MEETINGS</span>
+
+                        <h3>Boardroom Setup</h3>
+
+                        <p>
+                            A professional arrangement suitable for
+                            business discussions, management meetings
+                            and small group engagements.
+                        </p>
+
+                        <a href="#conference-booking" class="conference-room-link">
+                            Enquire About This Space
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- SPACE 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="conference-room-card">
+
+                    <div class="conference-room-image">
+                        <img src="{% static 'resort/img/meetings/r2.jpg' %}"
+                             alt="Classroom conference setup">
+
+                        <span class="conference-room-tag">TRAINING</span>
+                    </div>
+
+                    <div class="conference-room-content">
+                        <span class="conference-room-subtitle">LEARNING & DEVELOPMENT</span>
+
+                        <h3>Classroom Setup</h3>
+
+                        <p>
+                            An organised arrangement for workshops,
+                            training programmes, seminars and
+                            educational sessions.
+                        </p>
+
+                        <a href="#conference-booking" class="conference-room-link">
+                            Enquire About This Space
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- SPACE 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="conference-room-card">
+
+                    <div class="conference-room-image">
+                        <img src="{% static 'resort/img/meetings/r3.jpg' %}"
+                             alt="Theatre style conference setup">
+
+                        <span class="conference-room-tag">PRESENTATIONS</span>
+                    </div>
+
+                    <div class="conference-room-content">
+                        <span class="conference-room-subtitle">LARGE GATHERINGS</span>
+
+                        <h3>Theatre Setup</h3>
+
+                        <p>
+                            A seating arrangement designed for
+                            presentations, talks, conferences
+                            and group addresses.
+                        </p>
+
+                        <a href="#conference-booking" class="conference-room-link">
+                            Enquire About This Space
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONFERENCE FACILITIES -->
+<section class="conference-facilities-section">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5" data-aos="fade-right">
+                <span class="slbl">SUPPORTING YOUR EVENT</span>
+
+                <h2 class="stitle">
+                    Conference <span>Facilities</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="conference-description">
+                    A successful meeting requires more than just
+                    a venue. Explore the facilities and support
+                    that may be available to make your event run smoothly.
+                </p>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <h4>Internet Access</h4>
+                                <p>Connectivity for meetings and work sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <h4>Presentation Equipment</h4>
+                                <p>Support for presentations and discussions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-volume-up"></i>
+                            <div>
+                                <h4>Sound System</h4>
+                                <p>Audio support for conference sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-utensils"></i>
+                            <div>
+                                <h4>Dining Services</h4>
+                                <p>Meal arrangements for event participants.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <h4>Parking</h4>
+                                <p>Convenient parking arrangements for guests.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="conference-facility">
+                            <i class="fas fa-concierge-bell"></i>
+                            <div>
+                                <h4>Guest Support</h4>
+                                <p>Assistance with event arrangements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- EVENT TYPES -->
+<section class="conference-events-section">
+    <div class="container">
+
+        <div class="conference-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">VERSATILE EVENT SPACES</span>
+
+            <h2 class="stitle">
+                Events We <span>Accommodate</span>
+            </h2>
+
+            <div class="sline mx-auto"></div>
+
+            <p class="sdesc mx-auto">
+                A welcoming destination for different professional,
+                educational and organisational gatherings.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="conference-event-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Business Meetings</h3>
+                    <p>Professional gatherings for discussions, planning and decision-making.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="conference-event-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Workshops & Training</h3>
+                    <p>Spaces for learning, skills development and knowledge sharing.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="conference-event-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Seminars</h3>
+                    <p>Suitable settings for presentations, discussions and group learning.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="conference-event-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Corporate Events</h3>
+                    <p>Gatherings for organisations, teams and professional networks.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONFERENCE IMAGE GALLERY -->
+<section class="conference-gallery-section">
+    <div class="container">
+
+        <div class="conference-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">A LOOK AT OUR SPACES</span>
+            <h2 class="stitle">Conference <span>Gallery</span></h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto">
+                Take a look at the spaces and arrangements
+                available for your gatherings.
+            </p>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="conference-gallery-image">
+                    <img src="{% static 'resort/img/meetings/r1.jpg' %}"
+                         alt="Conference room">
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="conference-gallery-image">
+                    <img src="{% static 'resort/img/meetings/r2.jpg' %}"
+                         alt="Meeting arrangement">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONFERENCE BOOKING CTA -->
+<section class="conference-booking-section" id="conference-booking">
+    <div class="container">
+        <div class="conference-booking-content text-center" data-aos="zoom-in">
+
+            <span class="slbl">LET'S PLAN YOUR NEXT EVENT</span>
+
+            <h2>Host Your Next Conference at Koriema Resort</h2>
+
+            <p>
+                Get in touch with our team to discuss your event,
+                preferred setup, number of participants and
+                conference requirements.
+            </p>
+
+            <a href="/contact/" class="btn-red">
+                <i class="fas fa-calendar-check me-2"></i>
+                Enquire About a Conference
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+{% block footer %}
+{{ block.super }}
+{% endblock footer %}
+{% endblock body %}

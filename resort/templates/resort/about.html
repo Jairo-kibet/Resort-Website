@@ -1,0 +1,530 @@
+{% extends "resort/index.html" %}
+{% load static %}
+{% block current_page %}About us| {% endblock current_page %}
+{% block header_link %}
+
+{% endblock header_link %}
+{% block body %}
+{% block navigation %}
+{{ block.super }}
+{% endblock navigation %}
+<!-- ABOUT US -->
+<section id="about">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- About Images -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="astack">
+
+                    <div class="aexp">
+                        <span class="anum">Relax</span>
+                        <small>Comfort &<br>Hospitality</small>
+                    </div>
+
+                    <div class="amain">
+                        <img src="{% static 'resort/img/about1.jpg' %}"
+                             alt="Koriema Resort">
+                    </div>
+
+                    <div class="asm">
+                        <img src="{% static 'resort/img/about2.jpg' %}"
+                             alt="Koriema Resort Experience">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="col-lg-7" data-aos="fade-left">
+
+                <span class="slbl">Discover Koriema Resort</span>
+
+                <h2 class="stitle text-start">
+                    Experience Comfort,
+                    <span>Relaxation & Hospitality</span>
+                </h2>
+
+                <div class="sline lft"></div>
+
+                <p class="sdesc mb-4">
+                    Welcome to Koriema Resort, your destination for relaxation,
+                    comfort and memorable experiences. We offer a welcoming
+                    environment where guests can escape their daily routines,
+                    enjoy quality services and create beautiful memories.
+                </p>
+
+                <p class="sdesc mb-4">
+                    Whether you are visiting for a relaxing getaway, dining
+                    experience, family gathering or special occasion, our
+                    commitment is to provide warm hospitality, comfortable
+                    surroundings and services that make every visit special.
+                </p>
+
+                <!-- Resort Highlights -->
+                <div class="mb-4">
+
+                    <div class="fti">
+                        <div class="ftico r">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div>
+                            <h6>Comfortable Accommodation</h6>
+                            <p>
+                                Enjoy a relaxing stay in a welcoming
+                                environment designed with your comfort
+                                and convenience in mind.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fti">
+                        <div class="ftico y">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div>
+                            <h6>Exceptional Dining Experience</h6>
+                            <p>
+                                Enjoy delicious meals and refreshing
+                                experiences in a warm and welcoming
+                                dining atmosphere.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fti">
+                        <div class="ftico g">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <h6>Events & Special Occasions</h6>
+                            <p>
+                                Make your celebrations, meetings and
+                                special gatherings memorable with
+                                our hospitality and services.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION, VISION & CORE VALUES -->
+<section id="mission-vision" class="mission-vision section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">What Guides Us</span>
+            <h2 class="stitle">
+                Our <span>Mission, Vision & Values</span>
+            </h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto" style="max-width: 650px;">
+                Our commitment to exceptional hospitality is guided
+                by a clear purpose, a shared vision and values that
+                shape everything we do.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Mission -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+
+                    <span class="mv-label">OUR PURPOSE</span>
+
+                    <h3>Our Mission</h3>
+
+                    <p>
+                        To provide exceptional hospitality, quality
+                        services and comfortable experiences that
+                        exceed guest expectations while creating
+                        lasting memories for everyone who visits
+                        Koriema Resort.
+                    </p>
+
+                    <div class="mv-decoration">01</div>
+                </div>
+            </div>
+
+            <!-- Vision -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="mv-card featured">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+
+                    <span class="mv-label">OUR ASPIRATION</span>
+
+                    <h3>Our Vision</h3>
+
+                    <p>
+                        To become a preferred hospitality destination
+                        recognized for outstanding guest experiences,
+                        quality service, comfort and a welcoming
+                        atmosphere.
+                    </p>
+
+                    <div class="mv-decoration">02</div>
+                </div>
+            </div>
+
+            <!-- Core Values -->
+            <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+
+                    <span class="mv-label">WHAT WE BELIEVE IN</span>
+
+                    <h3>Our Core Values</h3>
+
+                    <ul class="values-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Exceptional Hospitality
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Customer Satisfaction
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Integrity & Professionalism
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Quality & Excellence
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Cleanliness & Comfort
+                        </li>
+                    </ul>
+
+                    <div class="mv-decoration">03</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE US SECTION -->
+<section id="why-us" class="why-us section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Why Choose Us</span>
+            <h2 class="stitle">
+                Discover the <span>Koriema Experience</span>
+            </h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto" style="max-width: 650px;">
+                Experience the perfect blend of comfort, relaxation and
+                exceptional hospitality. Discover what makes every visit
+                to Koriema Resort special.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="row g-4">
+
+            <!-- Hospitality -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h4>Exceptional Hospitality</h4>
+                    <p>
+                        Enjoy warm welcomes, friendly service and
+                        genuine hospitality that makes every guest
+                        feel valued and appreciated.
+                    </p>
+                    <span class="why-number">01</span>
+                </div>
+            </div>
+
+            <!-- Comfort -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h4>Comfort & Relaxation</h4>
+                    <p>
+                        Escape your daily routine and enjoy a welcoming
+                        atmosphere designed for relaxation, comfort
+                        and peace of mind.
+                    </p>
+                    <span class="why-number">02</span>
+                </div>
+            </div>
+
+            <!-- Dining -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Quality Dining</h4>
+                    <p>
+                        Discover enjoyable dining experiences with
+                        delicious meals and a welcoming atmosphere
+                        for every occasion.
+                    </p>
+                    <span class="why-number">03</span>
+                </div>
+            </div>
+
+            <!-- Experiences -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Memorable Experiences</h4>
+                    <p>
+                        From family gatherings to special occasions,
+                        we aim to make every moment at Koriema Resort
+                        truly memorable.
+                    </p>
+                    <span class="why-number">04</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FACILITIES & SERVICES SECTION -->
+<section id="facilities" class="facilities-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="facilities-heading text-center" data-aos="fade-up">
+
+            <span class="slbl">Explore Koriema Resort</span>
+
+            <h2 class="stitle">
+                Our <span>Facilities & Services</span>
+            </h2>
+
+            <div class="sline mx-auto"></div>
+
+            <p class="sdesc mx-auto">
+                Discover thoughtfully designed spaces and services
+                that bring together comfort, relaxation and memorable
+                hospitality experiences.
+            </p>
+
+        </div>
+
+
+        <!-- Facilities Grid -->
+        <div class="row g-4">
+
+            <!-- Accommodation -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up">
+
+                <div class="facility-card">
+
+                    <img src="{% static 'resort/img/accommodation.jpg' %}"
+                         alt="Koriema Resort Accommodation">
+
+                    <div class="facility-overlay"></div>
+
+                    <div class="facility-content">
+
+                        <span class="facility-category">
+                            COMFORT & RELAXATION
+                        </span>
+
+                        <h3>Accommodation</h3>
+
+                        <p>
+                            Enjoy a comfortable and welcoming stay
+                            in an environment designed for relaxation
+                            and convenience.
+                        </p>
+
+                        <a href="#rooms" class="facility-link">
+                            Explore Accommodation
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="facility-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="facility-card">
+
+                    <img src="{% static 'resort/img/restaurant.jpg' %}"
+                         alt="Koriema Resort Restaurant">
+
+                    <div class="facility-overlay"></div>
+
+                    <div class="facility-content">
+
+                        <span class="facility-category">
+                            FOOD & DINING
+                        </span>
+
+                        <h3>Restaurant & Dining</h3>
+
+                        <p>
+                            Experience enjoyable dining moments with
+                            delicious meals and a welcoming atmosphere
+                            for every occasion.
+                        </p>
+
+                        <a href="#menu" class="facility-link">
+                            Explore Dining
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="facility-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Events -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="150">
+
+                <div class="facility-card">
+
+                    <img src="{% static 'resort/img/events.jpg' %}"
+                         alt="Events and Celebrations">
+
+                    <div class="facility-overlay"></div>
+
+                    <div class="facility-content">
+
+                        <span class="facility-category">
+                            CELEBRATIONS & GATHERINGS
+                        </span>
+
+                        <h3>Events & Celebrations</h3>
+
+                        <p>
+                            Make your special occasions memorable with
+                            a welcoming setting for celebrations,
+                            gatherings and social events.
+                        </p>
+
+                        <a href="#events" class="facility-link">
+                            Discover Events
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="facility-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Relaxation -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="facility-card">
+
+                    <img src="{% static 'resort/img/swimming.jpg' %}"
+                         alt="Koriema Resort Relaxation Spaces">
+
+                    <div class="facility-overlay"></div>
+
+                    <div class="facility-content">
+
+                        <span class="facility-category">
+                            LEISURE & ENJOYMENT
+                        </span>
+
+                        <h3>Relaxation & Leisure</h3>
+
+                        <p>
+                            Take a break from your everyday routine
+                            and enjoy peaceful surroundings and
+                            refreshing moments.
+                        </p>
+
+                        <a href="#contact" class="facility-link">
+                            Plan Your Visit
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="facility-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Call To Action -->
+        <div class="facilities-cta text-center" data-aos="fade-up">
+
+            <h3>Experience the Koriema Difference</h3>
+
+            <p>
+                Let us make your next visit comfortable,
+                enjoyable and memorable.
+            </p>
+
+            <a href="#contact" class="btn-red">
+                <i class="fas fa-calendar-check"></i>
+                Make an Enquiry
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% block footer %}
+{{ block.super }}
+{% endblock footer %}
+{% endblock body %}

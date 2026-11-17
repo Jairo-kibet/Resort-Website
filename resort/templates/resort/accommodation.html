@@ -1,0 +1,298 @@
+{% extends "resort/index.html" %}
+{% load static %}
+{% block current_page %}Accommodation| {% endblock current_page %}
+{% block header_link %}
+
+{% endblock header_link %}
+{% block body %}
+{% block navigation %}
+{{ block.super }}
+{% endblock navigation %}
+
+<!-- INTRODUCTION -->
+<section class="ac-intro-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="ac-intro-image">
+                    <img src="{% static 'resort/img/accommodation.jpg' %}"
+                         alt="Koriema Resort accommodation">
+
+                    <div class="ac-image-caption">
+                        <i class="fas fa-bed"></i>
+                        <div>
+                            <strong>A Place to Relax</strong>
+                            <span>Enjoy your stay with us</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="slbl">Your comfort, Our priority</span>
+
+                <h2 class="stitle">
+                    A Relaxing Stay at <span>Koriema Resort</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="ac-intro-text">
+                    At Koriema Resort, we believe that a great stay begins
+                    with comfort, convenience and genuine hospitality.
+                    Our accommodation experience is designed to provide
+                    guests with a welcoming environment where they can
+                    relax, refresh and enjoy their time away.
+                </p>
+
+                <p class="ac-intro-text">
+                    Whether you are visiting for business, leisure or a
+                    special occasion, we look forward to making your stay
+                    enjoyable and memorable.
+                </p>
+
+                <a href="#rooms" class="btn-red">
+                    Explore Our Rooms
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ROOM CATEGORIES -->
+<section class="ac-rooms-section" id="rooms">
+    <div class="container">
+
+        <div class="ac-section-heading text-center" data-aos="fade-up">
+            <span class="slbl">Find Your Perfect Stay</span>
+            <h2 class="stitle">Our <span>Accommodation</span></h2>
+            <div class="sline mx-auto"></div>
+            <p class="sdesc mx-auto">
+                Explore our range of comfortable accommodation options,
+                thoughtfully designed to make every stay memorable.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- ROOM 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r1.jpg' %}" alt="Standard Room">
+                        <span class="ac-room-tag">COMFORT</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">A WELCOMING STAY</span>
+                        <h3>Standard Room</h3>
+                        <p>A welcoming space offering a comfortable and relaxing environment for individual guests.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROOM 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r2.jpg' %}" alt="Deluxe Room">
+                        <span class="ac-room-tag">EXTRA COMFORT</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">MORE SPACE TO RELAX</span>
+                        <h3>Deluxe Room</h3>
+                        <p>Enjoy additional space and a welcoming atmosphere designed for a relaxing experience.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROOM 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r3.jpg' %}" alt="Family Room">
+                        <span class="ac-room-tag">FAMILY STAY</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">SPACE FOR EVERYONE</span>
+                        <h3>Family Room</h3>
+                        <p>A spacious accommodation option for families and guests travelling together.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROOM 4 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r4.jpg' %}" alt="Executive Room">
+                        <span class="ac-room-tag">PREMIUM</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">REFINED COMFORT</span>
+                        <h3>Executive Room</h3>
+                        <p>A refined accommodation experience suited for guests seeking an elevated stay.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROOM 5 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r5.jpg' %}" alt="Single Room">
+                        <span class="ac-room-tag">SIMPLICITY</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">PERSONAL RETREAT</span>
+                        <h3>Single Room</h3>
+                        <p>A convenient and comfortable space for solo travellers and individual guests.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            
+            <!-- ROOM 6 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="ac-room-card">
+                    <div class="ac-room-image">
+                        <img src="{% static 'resort/img/rooms/r6.jpg' %}" alt="Superior Room">
+                        <span class="ac-room-tag">SUPERIOR</span>
+                    </div>
+                    <div class="ac-room-content">
+                        <span class="ac-room-subtitle">A SPECIAL STAY</span>
+                        <h3>Superior Room</h3>
+                        <p>A thoughtfully presented room offering a comfortable and enjoyable guest experience.</p>
+                        <a href="#booking" class="ac-room-link">
+                            Make an Enquiry <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="ac-amenities-section">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5" data-aos="fade-right">
+                <span class="slbl">A comfortable experience</span>
+
+                <h2 class="stitle">
+                    Designed Around <span>Your Comfort</span>
+                </h2>
+
+                <div class="sline"></div>
+
+                <p class="ac-intro-text">
+                    We aim to make every guest feel welcome by providing
+                    a comfortable environment and convenient services
+                    throughout their stay.
+                </p>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <div class="ac-amenity">
+                            <i class="fas fa-bed"></i>
+                            <div>
+                                <h4>Comfortable Rooms</h4>
+                                <p>Relax in a welcoming environment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="ac-amenity">
+                            <i class="fas fa-bath"></i>
+                            <div>
+                                <h4>Bathroom Facilities</h4>
+                                <p>Convenient facilities for your stay.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="ac-amenity">
+                            <i class="fas fa-utensils"></i>
+                            <div>
+                                <h4>Dining Services</h4>
+                                <p>Enjoy meals during your visit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="ac-amenity">
+                            <i class="fas fa-concierge-bell"></i>
+                            <div>
+                                <h4>Guest Hospitality</h4>
+                                <p>Experience friendly guest service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- BOOKING CTA -->
+<section class="ac-booking-section" id="booking">
+    <div class="container">
+        <div class="ac-booking-content text-center" data-aos="zoom-in">
+
+            <span class="slbl">Plan your stay</span>
+
+            <h2>Ready to Experience Koriema Resort?</h2>
+
+            <p>
+                Get in touch with us to enquire about room availability,
+                accommodation options and reservations.
+            </p>
+
+            <a href="/contact/" class="btn-red">
+                <i class="fas fa-calendar-check me-2"></i>
+                Make a Reservation
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% block footer %}
+{{ block.super }}
+{% endblock footer %}
+{% endblock body %}
